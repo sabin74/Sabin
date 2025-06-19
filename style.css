@@ -1,0 +1,479 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    background-color: #080708;
+    color: white;
+    padding: 10px 20px;
+    height: 85px;
+}
+
+.logo {
+    font-family: "Pacifico", cursive;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.logo h2 a {
+    text-decoration: none;
+    color: #D00000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    font-weight: bolder;
+}
+
+.nav-links li {
+    padding: 10px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links li a:hover {
+    color: red;
+    transition: color 0.3s ease;
+    transform: scale(1.2);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+.theme-toggle {
+    font-size: 1.4rem;
+    cursor: pointer;
+    margin-left: 20px;
+    user-select: none;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    display: inline-block;
+}
+
+.theme-toggle.animate {
+    transform: rotate(360deg);
+    opacity: 0.5;
+}
+
+/* Hero Section */
+.hero {
+    padding: 120px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #151E3F;
+    background: linear-gradient(to bottom, #f8f8f8, #fff);
+}
+
+.heroWrapper {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.heroText {
+    flex: 1;
+    min-width: 300px;
+}
+
+.heroText h1 {
+    font-size: 2.5rem;
+    color: #151E3F;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.549);
+    font-family: 'Pacifico', cursive;
+}
+
+.heroText h2 {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.349);
+    font-size: 1.8rem;
+    color: #D00000;
+    margin-bottom: 20px;
+}
+
+.heroText p {
+    font-size: 1.25rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-width: 600px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    font-family: 'Pacifico', cursive;
+}
+}
+
+.heroButtons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.heroBtn {
+    display: inline-block;
+    background-color: #151E3F;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.heroBtn:hover {
+    background-color: #D00000;
+}
+
+.heroBtn.outline {
+    background-color: #151E3F;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.heroBtn.outline:hover {
+    background-color: #D00000;
+    border-color: #D00000;
+    color: white;
+}
+
+.heroImageContainer {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.heroImage {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.aboutContent {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #151E3F;
+    font-family: 'Pacifico', cursive;
+}
+
+.aboutIntro {
+    font-size: 1.05rem;
+    max-width: 850px;
+    margin: 0 auto 40px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.sectionSubhead {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #151E3F;
+    text-align: center;
+}
+
+.skillsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+
+.skillsList span {
+    background-color: #151E3F;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+}
+
+/* Project Cards */
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.projectCard {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: transform 0.2s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+}
+
+.projectCard h4 {
+    font-size: 1.2rem;
+    color: #D00000;
+    margin-bottom: 10px;
+}
+
+.projectCard p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contactContent {
+    max-width: 900px;
+    margin: auto;
+}
+
+.contact h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+    color: #151E3F;
+}
+
+.contact p {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.contactItem {
+    font-size: 1rem;
+}
+
+.contactItem a {
+    color: #D00000;
+    text-decoration: none;
+}
+
+.contactItem a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #080708;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.favicons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.favicons img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.favicons img:hover {
+    transform: scale(1.2);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .heroWrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .heroText h1 {
+        font-size: 2rem;
+    }
+
+    .heroText h2 {
+        font-size: 1.3rem;
+    }
+
+    .heroText p {
+        font-size: 1rem;
+    }
+
+    .skillsList {
+        justify-content: flex-start;
+        padding: 0 10px;
+    }
+
+    .aboutIntro {
+        padding: 0 15px;
+    }
+
+    .projectCard {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 610px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        height: auto;
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+        background-color: #080708;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 10px 0;
+        z-index: 1;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+@media (max-width: 610px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: #080708;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 10px 0;
+    z-index: 1;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        padding: 0 1rem;
+    }
+
+    .favicons img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 20px 10px;
+    }
+
+    .contactInfo {
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+
+    .contactItem {
+        font-size: 0.95rem;
+    }
+}
+
